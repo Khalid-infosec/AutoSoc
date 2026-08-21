@@ -11,7 +11,6 @@ This lab reproduces a realistic enterprise SOC pipeline from scratch. Traffic pa
 Four VLANs sit behind a pfSense firewall: SOC, DMZ, Database, and WAN. A Kali Linux machine plays the Red Team role and sends traffic through pfSense, which enforces traffic control before anything reaches the protected zones. Suricata inspects that traffic inline on the SOC VLAN. Inside the SOC core, Wazuh collects alerts and logs, TheHive turns qualifying alerts into cases, Cortex enriches those cases with threat intelligence, and n8n orchestrates the full path from detection to notification.
 
 ![SOC lab architecture](screenshots/01_architecture.png)
-<img width="879" height="1046" alt="01_architecture" src="https://github.com/user-attachments/assets/e98aa293-f878-42fd-a597-8383d0e601b1" />
 
 
 ## Tools Deployed
@@ -45,7 +44,6 @@ Kali Linux → Suricata detects the activity → Wazuh generates an alert
 ```
 
 ![n8n automation workflow](screenshots/04_n8n_workflow.png)
-<img width="904" height="325" alt="04_n8n_workflow" src="https://github.com/user-attachments/assets/da6e8f4b-4919-4de9-b39a-3388f72751c6" />
 
 
 ## Results
@@ -60,17 +58,14 @@ Kali Linux → Suricata detects the activity → Wazuh generates an alert
 
 ![Wazuh security events overview](screenshots/02_wazuh_overview.png)
 *Alert level evolution and top MITRE ATT&CK techniques detected.*
-<img width="1198" height="673" alt="02_wazuh_overview" src="https://github.com/user-attachments/assets/c993dcb0-fce7-4c69-804c-83a7e6862738" />
-
 
 ![Custom SOC dashboard](screenshots/03_soc_dashboard.png)
 *Alerts grouped by category and by agent.*
-<img width="1204" height="565" alt="03_soc_dashboard" src="https://github.com/user-attachments/assets/94b0809e-7f45-4064-88bc-fa89cfe6f6ba" />
+
 
 
 ![TheHive case queue](screenshots/05_thehive_cases.png)
 *Status and severity distribution across the 29 incidents created.*
-<img width="1129" height="516" alt="05_thehive_cases" src="https://github.com/user-attachments/assets/f4e6e914-c73a-4ad4-b12b-6f85e097ca20" />
 
 
 ## Skills Developed
